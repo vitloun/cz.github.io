@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Menus</title>
+
+    <!-- External Stylesheets -->
+    <link rel="stylesheet" href="menus.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Config and Main JS Files -->
+    <script src="config.js"></script>
+    <script src="main.js" defer></script>
+
+    <!-- Inline Styles -->
+    <style>
+      .background {
+        background-image: url(img/pexels-photo-1435895.jpeg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 800px;
+      }
+
+      .headerfooter ul {
+        display: flex;
+        list-style: none;
+        justify-content: space-around;
+      }
+
+      .menu ul {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        list-style: none;
+      }
+    </style>
+  </head>
+
+  <body>
+      <!-- header -->
+      <header class="bg-blue-600 text-white">
+        <div
+          class="container mx-auto flex justify-between items-center py-4 px-6">
+          <div class="text-2xl font-bold"><a href="homeblog.html">Chill Zone</a></div>
+          <nav class="hidden md:flex space-x-4">
+            <a class="text-white" href="homeblog.html"> Home </a>
+            <a class="text-white" href="aboutblogd.html"> About </a>
+            <a class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full" href="menus.html"> Menu </a>
+            <a class="text-white" href="Blog.html"> Pages </a>
+            <a class="text-white" href="contact.html">Contact</a>
+          </nav>
+        </div>
+      </header>
+    <!-- Main Content Section -->
+    <main>
+      <section>
+        <h2 class="center text-6xl font-bold text-center m-10">Our Menus</h2>
+        <p class="text-center text-lg">
+          We consider all the drivers of change to give you the components you
+          need to create a truly special experience.
+        </p><br><br><br><br>
+<!-- footer -->
+<footer class="bg-gray-800 text-white py-12">
+  <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-6">
+    <div>
+      <h3 class="text-2xl font-bold mb-4">Chill Zone</h3>
+      <p class="text-gray-400 mb-4">
+        We can't wait to see you at Chill Zone. We're a community of foodies who love to share.
+      </p>
+    </div>
+    <div>
+      <h3 class="text-xl font-semibold mb-4">Pages</h3>
+      <ul class="space-y-2">
+        <li>
+          <a class="text-gray-400" href="homeblog.html"> Home </a>
+        </li>
+        <li>
+          <a class="text-gray-400" href="aboutblogd.html"> About </a>
+        </li>
+        <li>
+          <a class="text-gray-400" href="menus.html"> Menu </a>
+        </li>
+        <li>
+          <a class="text-gray-400" href="Blog.html"> Blog </a>
+        </li>
+        <li>
+          <a class="text-gray-400" href="contact.html"> Contact </a>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="text-xl font-semibold mb-4">Utility Pages</h3>
+      <ul class="space-y-2">
+        <li>
+          <a class="text-gray-400" href="#"> Start Here </a>
+        </li>
+          <a class="text-gray-400" href="#"> Password Protected </a>
+        </li>
+        <li>
+          <a class="text-gray-400" href="#"> 404 Not Found </a>
+        </li>
+        <li>
+          <a class="text-gray-400" href="#"> Changelog </a>
+        </li>
+        <li>
+          <a class="text-gray-400" href="#"> View More </a>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="text-xl font-semibold mb-4">Follow Us On Instagram</h3>
+      <div class="grid grid-cols-2 gap-2">
+        <img
+          alt="Delicious food item 1"
+          class="w-full h-full object-cover rounded-lg"
+          height="100"
+          src="img/eggfried.jpg"
+          width="100"
+        />
+        <img
+          alt="Delicious food item 2"
+          class="w-full h-full object-cover rounded-lg"
+          height="100"
+          src="img/burger.jpg"
+          width="100"
+        />
+        <img
+          alt="Delicious food item 3"
+          class="w-full h-full object-cover rounded-lg"
+          height="100"
+          src="img/curry.jpg"
+          width="100"
+        />
+        <img
+          alt="Delicious food item 4"
+          class="w-full h-full object-cover rounded-lg"
+          height="100"
+          src="img/1057-2.jpg"
+          width="100"
+        />
+      </div>
+    </div>
+  </div>
+</footer>
+      </section>
+
+      <!-- Dynamic Food Items Section -->
+      <section
+        id="food"
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 p-10"
+      >
+        <!-- Food items will show here from api -->
+      </section>
+    </main>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Fetch data from the API
+        fetch(API_URL + "/read.php")
+          .then((response) => response.json())
+          .then((data) => {
+            const foodItems = data.foods;
+            let foodHTML = "";
+            //Loop each food
+            foodItems.forEach((item) => {
+              const imgSrc = `${API_URL}/${item.food_img}`;
+              foodHTML += `
+                <div class="justify-center bg-white shadow-md rounded-lg px-1">
+                  <img class="w-full h-52 rounded-lg" src="${imgSrc}" alt="${item.food_name}" />
+                  <div class="p-4">
+                    <h3 class="text-xl font-semibold mt-4">${item.food_name}</h3>
+                    <p class="text-lg font-bold text-red-500">$${item.food_price}</p>
+                    <p class="mt-2 text-gray-600">${item.food_description}</p>
+                  </div>
+                </div>
+              `;
+            });
+            document.getElementById("food").innerHTML = foodHTML;
+          })
+          .catch((error) => {
+            console.error("Error fetching food data:", error);
+          });
+      });
+    </script>
+  </body>
+</html>

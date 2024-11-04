@@ -1,0 +1,139 @@
+.header{
+    width: 100%;
+    height: 70px;
+    background-color: rgb(255, 255, 255);
+}
+.headerfooter{
+    width: 100%;
+    height: 45px;
+    background-color: blue;
+}
+.menu {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu ul li {
+    display: inline;
+    padding: 15px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    font-size:  16pt;
+    color: black;
+}
+
+.menu ul li a:hover {
+    cursor: pointer;
+    border: 3px solid #DBDFD0;
+    background-color: #DBDFD0;
+    border-radius: 60px;
+    
+}
+.benner{
+  width: 100%;
+  height: 600px;
+  background-image: url(img/image\ 110.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+.center{
+    font-size: 50pt;
+    padding-top: 100px;
+}
+.descrip{
+    margin-top: -60px;
+}
+.descrip1{
+  margin-top: -15px;
+}
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem; /* Controls the space between the buttons */
+  }
+  
+  .btn {
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 30px;
+    font-size: 16pt;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .primary {
+    background-color: #a32f2f; /* Adjust the red color as per your image */
+    color: white;
+    border: 1px solid transparent;
+  }
+  
+  .secondary {
+    background-color: transparent;
+    color: black;
+    border: 2px solid black;
+  }
+  /* Browe Our menu*/
+  
+  /* for footer container  content and  */
+  footer{
+    width: 100%;
+    height: 600px;
+    background-color: #474747;
+  }
+  .container-footer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .content-footer{
+    width: 400px;
+    height: 400px;
+    float: left;
+    margin-left: 10px;
+    margin-top: 30px;
+ 
+  }
+  .footer-menu{
+    width: 180px;
+    height: 300px;
+    float: left;
+    margin-left: 10px;
+    color: #DBDFD0;
+  }
+  .footer-menu ul{
+    list-style: none;
+    margin-top: 20px;
+  }
+  .image-footer_card{
+    width: 400px;
+    height: 400px;
+  }
+  .img-conainer_footer{
+    width: 400px;
+    height: 200px;
+    float: center;
+    margin-bottom: 20px;
+  }
+  .float-box{
+    width: 180px;
+    height: 200px;
+    float: left;
+    margin-left: 20px;
+  }
+  .float-box img{
+    width: 180px;
+    height: 200px;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+  /* about  */
+  

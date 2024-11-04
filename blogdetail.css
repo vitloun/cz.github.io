@@ -1,0 +1,163 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header{
+    width: 100%;
+    height: 70px;
+    background-color: rgb(255, 255, 255);
+}
+.headerfooter{
+    width: 100%;
+    height: 45px;
+    background-color: blue;
+}
+.menu {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu ul li {
+    display: inline;
+    padding: 15px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    font-size:  16pt;
+    color: black;
+}
+
+.menu ul li a:hover {
+    cursor: pointer;
+    border: 3px solid #DBDFD0;
+    background-color: #DBDFD0;
+    border-radius: 60px;
+    
+}
+.headerbl{
+    text-align: center;
+    font-size: xx-large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.content-section {
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: left;
+    padding: 0 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.content-section h1 h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.content-section p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.content-section ul{
+    list-style-type: disc;
+}
+.content-section ol {
+    list-style-type: decimal;
+    margin-left: 20px;
+}
+.content-section ol li {
+    margin-bottom: 12px;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+}
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 250px;
+}
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+.card-content {
+    padding: 15px;
+}
+.card-content p {
+    margin: 0;
+    color: #6b7280;
+    font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.card-content h3 {
+    margin: 10px 0 0;
+    font-size: 18px;
+}
+#cd{
+    padding-left: 10px;
+}
+#cd a{
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #111827;
+}
+.card:hover{
+    transform: scale(1.1);
+}
+/* for footer container  content and  */
+footer{
+    width: 100%;
+    height: 600px;
+    background-color: #474747;
+  }
+  .content-footer{
+    width: 400px;
+    height: 400px;
+    float: left;
+    margin-left: 10px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer-menu{
+    width: 180px;
+    height: 300px;
+    float: left;
+    margin-left: 10px;
+  }
+  .image-footer_card{
+    width: 400px;
+    height: 400px;
+  }
+  .img-conainer_footer{
+    width: 400px;
+    height: 200px;
+    float: center;
+    margin-bottom: 20px;
+  }
+  .float-box{
+    width: 180px;
+    height: 200px;
+    float: left;
+    margin-left: 20px;
+  }
+  .float-box img{
+    width: 180px;
+    height: 200px;
+    border-radius: 20px;
+    object-fit: cover;
+  }
